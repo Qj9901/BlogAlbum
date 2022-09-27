@@ -1,0 +1,58 @@
+{
+    "id": "mihoyo.script.sub",
+    "name": "米游社脚本",
+    "description": "该订阅兼容BoxJs以及QX Gallery",
+    "author": "@qj9901",
+    "icon": "https://avatars2.githubusercontent.com/u/53217160",
+    "repo": "https://github.com/NobyDa/Script/tree/master",
+    "apps": [{
+            "id": "mihoyo",
+            "name": "米游社",
+            "keys": ["kayanouriko_mihoyobbs_headers_bbs","kayanouriko_mihoyobbs_headers_sign","kayanouriko_mihoyobbs_config"],
+            "author": "@qj9901",
+            "icons": [
+              "https://raw.githubusercontent.com/Former-Years/icon/master/github-bf.png",
+              "https://raw.githubusercontent.com/Former-Years/icon/master/github-bf.png"
+            ],
+            "descs_html": [
+              "Token的获取方式:",
+              "头像菜单->\n      Settings ->\n      Developer settings ->\n      Personal access tokens ->\n      Generate new token ->\n      在里面找到 gist 勾选提交"
+            ],
+            "scripts": [
+              {
+                "name": "米游社签到",
+                "script": "https://raw.githubusercontent.com/kayanouriko/quantumultx-mihoyobbs-auto-helper/main/src/mihoyobbs-auto-helper.js"
+              }
+            ],
+            "settings": [
+              {
+                "id": "kayanouriko_mihoyobbs_headers_bbs",
+                "name": "bbs_headers",
+                "val": null,
+                "type": "text",
+                "placeholder": "bbs_headers",
+                "desc": "必填"
+              },
+              {
+                "id": "kayanouriko_mihoyobbs_headers_sign",
+                "name": "mihoyobbs_sign_headers",
+                "val": null,
+                "type": "text",
+                "placeholder": "mihoyobbs_sign_headers",
+                "desc": "必填"
+              },
+              {
+                "id": "kayanouriko_mihoyobbs_config",
+                "name": "mihoyobbs_config",
+                "val": null,
+                "type": "text",
+                "placeholder": "mihoyobbs_config",
+                "desc": "选填（默认原神）"
+              }
+            ]
+          }],
+    "task": [{
+      "config": "15 8 * * * https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, tag=百度贴吧签到, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/tieba.png",
+      "addons": "https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js_Remote_Cookie.conf, tag=NobyDa Cookie获取"
+    }]
+}
