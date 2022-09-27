@@ -3,7 +3,7 @@
     "name": "米游社脚本",
     "description": "该订阅兼容BoxJs以及QX Gallery",
     "author": "@qj9901",
-    "icon": "https://avatars2.githubusercontent.com/u/53217160",
+    "icon": "https://avatars2.githubusercontent.com/u/48348833",
     "repo": "https://github.com/NobyDa/Script/tree/master",
     "apps": [{
             "id": "mihoyo",
@@ -11,12 +11,11 @@
             "keys": ["kayanouriko_mihoyobbs_headers_bbs","kayanouriko_mihoyobbs_headers_sign","kayanouriko_mihoyobbs_config"],
             "author": "@qj9901",
             "icons": [
-              "https://raw.githubusercontent.com/Former-Years/icon/master/github-bf.png",
               "https://raw.githubusercontent.com/Former-Years/icon/master/github-bf.png"
             ],
             "descs_html": [
-              "Token的获取方式:",
-              "头像菜单->\n      Settings ->\n      Developer settings ->\n      Personal access tokens ->\n      Generate new token ->\n      在里面找到 gist 勾选提交"
+              "米游币Headers获取:",
+              "<h4 align=\"center\">打开米游社app，若出现<a href=\"https://www.bejson.com/json/format\">JSON格式</a>修改</h4>",
             ],
             "scripts": [
               {
@@ -27,7 +26,7 @@
             "settings": [
               {
                 "id": "kayanouriko_mihoyobbs_headers_bbs",
-                "name": "bbs_headers",
+                "name": "米游币任务Headers",
                 "val": null,
                 "type": "text",
                 "placeholder": "bbs_headers",
@@ -35,7 +34,7 @@
               },
               {
                 "id": "kayanouriko_mihoyobbs_headers_sign",
-                "name": "mihoyobbs_sign_headers",
+                "name": "原神每日签到Headers",
                 "val": null,
                 "type": "text",
                 "placeholder": "mihoyobbs_sign_headers",
@@ -44,7 +43,7 @@
               {
                 "id": "kayanouriko_mihoyobbs_config",
                 "name": "mihoyobbs_config",
-                "val": null,
+                "val": "{tasks: [1, 2],micoin: {sections: [34],actions: [58, 59, 60, 61]}}",
                 "type": "text",
                 "placeholder": "mihoyobbs_config",
                 "desc": "选填（默认原神）"
@@ -52,7 +51,7 @@
             ]
           }],
     "task": [{
-      "config": "15 8 * * * https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, tag=百度贴吧签到, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/tieba.png",
-      "addons": "https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js_Remote_Cookie.conf, tag=NobyDa Cookie获取"
-    }]
+            "config": "2 0 * * * https://raw.githubusercontent.com/kayanouriko/quantumultx-mihoyobbs-auto-helper/main/src/mihoyobbs-auto-helper.js, tag=米游社小助手, img-url=https://raw.githubusercontent.com/kayanouriko/quantumultx-mihoyobbs-auto-helper/main/assets/gallery-icon.png, enabled=false",
+            "addons": "https://raw.githubusercontent.com/kayanouriko/quantumultx-mihoyobbs-auto-helper/main/task/mihoyobbs.conf, tag=配置米游社小助手"
+        }]
 }
